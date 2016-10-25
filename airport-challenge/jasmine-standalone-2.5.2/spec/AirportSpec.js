@@ -1,17 +1,14 @@
 describe("Airport", function() {
   var airport;
   var airplane;
-  var planesarray;
 
   beforeEach(function() {
     airport = new Airport();
-    airplane = new Airplane();
-    planesarray = [];
+    airplane = new Airplane("1");
   });
 
 it("should be able to land a plane", function() {
-  airport.land(airplane);
-  expect(airport.planesarray).toContain(true);
-
+  airport.land("1");
+  expect(airport._planesArray).toContain("1");
 });
 });
