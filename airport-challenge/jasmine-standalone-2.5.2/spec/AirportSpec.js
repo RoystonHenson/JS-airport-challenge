@@ -7,8 +7,13 @@ describe("Airport", function() {
     airplane = new Airplane("1");
   });
 
-it("should be able to land a plane", function() {
-  airport.land("1");
-  expect(airport._planesArray).toContain("1");
-});
+  it("should be able to land a plane", function() {
+    airport.land("1");
+    expect(airport._planesArray).toContain("1");
+  });
+
+  it("should be able to take off", function() {
+    airport.takeOff("1");
+    expect(airport._planesArray).not.toContain("1");
+  });
 });
