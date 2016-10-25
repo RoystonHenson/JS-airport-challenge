@@ -1,0 +1,2 @@
+Airplane = function() {
+}
