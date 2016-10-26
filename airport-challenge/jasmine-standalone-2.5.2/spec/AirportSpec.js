@@ -4,7 +4,7 @@ describe("Airport", function() {
 
   beforeEach(function() {
     airport = new Airport();
-    airplane = new Airplane;
+    airplane = new Airplane();
   });
 
   it("should be able to land a plane", function() {

@@ -5,10 +5,12 @@ Airport = function() {
 
 Airport.prototype.land = function(plane) {
   this._planesArray.push(plane);
+  plane.isLanded = true
 };
 
 Airport.prototype.takeOff = function(plane) {
   removeItem(this._planesArray, plane)
+  plane.isLanded = false
 };
 
 function removeItem(array, item){
