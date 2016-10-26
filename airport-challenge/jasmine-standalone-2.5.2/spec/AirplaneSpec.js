@@ -7,7 +7,7 @@ describe("Airplane", function() {
     weather = new Weather();
     airport = new Airport(weather);
     airplane = new Airplane();
-    spyOn(weather, 'random').and.returnValue(0.1)
+    spyOn(weather, 'random').and.returnValue(0.1);
   });
 
   it("should know if it has landed", function() {
@@ -16,6 +16,7 @@ describe("Airplane", function() {
   });
 
   it("should know if it is in the air", function() {
+    airport.land(airplane);
     airport.takeOff(airplane);
     expect(airplane.isLanded).toEqual(false);
   });
