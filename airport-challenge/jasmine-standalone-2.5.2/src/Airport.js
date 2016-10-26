@@ -2,13 +2,13 @@
 Airport = function() {
   this._planesArray = [];
 };
- 
+
 Airport.prototype.land = function(plane) {
   this._planesArray.push(plane);
 };
 
-Airport.prototype.takeOff = function(plane_number) {
-  removeItem(this._planesArray, plane_number)
+Airport.prototype.takeOff = function(plane) {
+  removeItem(this._planesArray, plane)
 };
 
 function removeItem(array, item){

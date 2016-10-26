@@ -1,3 +1,2 @@
-Airplane = function(flightNumber) {
-  this.flightNo = flightNumber
+Airplane = function() {
 };

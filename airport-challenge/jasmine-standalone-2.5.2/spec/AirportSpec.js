@@ -4,16 +4,16 @@ describe("Airport", function() {
 
   beforeEach(function() {
     airport = new Airport();
-    airplane = new Airplane("1");
+    airplane = new Airplane;
   });
 
   it("should be able to land a plane", function() {
-    airport.land("1");
-    expect(airport._planesArray).toContain("1");
+    airport.land(airplane);
+    expect(airport._planesArray).toContain(airplane);
   });
 
   it("should be able to take off", function() {
-    airport.takeOff("1");
-    expect(airport._planesArray).not.toContain("1");
+    airport.takeOff(airplane);
+    expect(airport._planesArray).not.toContain(airplane);
   });
 });
