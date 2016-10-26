@@ -1,10 +1,13 @@
 describe("Airplane", function() {
   var airport;
   var airplane;
+  var weather;
 
   beforeEach(function() {
-    airport = new Airport();
+    weather = new Weather();
+    airport = new Airport(weather);
     airplane = new Airplane();
+    spyOn(weather, 'random').and.returnValue(0.1)
   });
 
   it("should know if it has landed", function() {
